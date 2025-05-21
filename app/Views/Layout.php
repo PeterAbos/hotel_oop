@@ -31,6 +31,9 @@ class Layout
         <nav class="navbar">
             <ul class="nav-list">
                 <li class="nav-button"><a href="/"><button style="button" title="Kezdőlap">Kezdőlap</button></a></li>
+                <li class="nav-button"><a href="/rooms"><button style="button" title="Szobák">Szobák</button></a></li>
+                <li class="nav-button"><a href="/guests"><button style="button" title="Vendégek">Vendégek</button></a></li>
+                <li class="nav-button"><a href="/reservations"><button style="button" title="Foglalások">Foglalások</button></a></li>
             </ul>
         </nav>
         HTML;

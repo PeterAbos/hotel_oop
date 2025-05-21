@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Interfaces\ControllerInterface;
 use App\Models\Model;
-//use App\Views\View;
+use App\Views\View;
 
 abstract class Controller implements ControllerInterface
 {
@@ -24,7 +24,7 @@ abstract class Controller implements ControllerInterface
 
     protected function render(string $view, array $data = []): void
     {
-        //View::render($view, $data);
+        View::render($view, $data);
     }
 
     protected function redirect(string $url): void
