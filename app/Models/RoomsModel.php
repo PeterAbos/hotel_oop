@@ -31,6 +31,4 @@ class RoomsModel extends Model
             $this->comment = $comment;
         }
     }
-
-
 }
