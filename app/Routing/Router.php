@@ -3,6 +3,7 @@
 namespace App\Routing;
 
 use App\Controllers\HomeController;
+use App\Controllers\RoomsController;
 use App\Views\Display;
 
 class Router
@@ -44,6 +45,10 @@ class Router
             case '/':
                 HomeController::index();
                 return;
+            case '/rooms':
+                $roomsController = new RoomsController();
+                $roomsController->index();
+                break;
         }
     }
     private function handlePostRequests(mixed $requestUri) {

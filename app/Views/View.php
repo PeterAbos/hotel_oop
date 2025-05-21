@@ -14,7 +14,7 @@ class View
         }
 
         if ($useLayout) {
-            Layout::header($data['title'] ?? 'Iskola');
+            Layout::header($data['title'] ?? 'Hotel');
         }
 
         extract($data);
