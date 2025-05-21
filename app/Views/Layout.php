@@ -11,6 +11,10 @@ class Layout
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>$title</title>
+
+                <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+                <link href="/css/school.css" rel="stylesheet" type="text/css">
+                <link href="/css/sajat.css" rel="stylesheet" type="text/css">
             </head>
             <body>
         HTML;
