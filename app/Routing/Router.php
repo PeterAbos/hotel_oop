@@ -52,7 +52,21 @@ class Router
         }
     }
     private function handlePostRequests(mixed $requestUri) {
+        $data = $this->filterPostData($_POST);
+        $id = $data['id'] ?? null;
 
+        switch ($requestUri) {
+            case '/rooms':
+                if(!empty($data)) {
+                    $roomsController = new RoomsController();
+                    $roomsController->save($data);
+                }
+                break;
+            case '/rooms/create':
+                $roomsController = new RoomsController();
+                $roomsController->create();
+                break;
+        }
     }
     private function handlePatchRequests(mixed $requestUri) {
 
@@ -64,5 +78,11 @@ class Router
     {
         header ($_SERVER['SERVER_PROTOCOL'] . ' 405 Method Not Allowed');
         Display::message("405 Method Not Allowed");
+    }
+    private function filterPostData(array $data): array
+    {
+        // Remove unnecessary keys in a clean and simple way
+        $filterKeys = ['_method', 'submit', 'btn-del', 'btn-save', 'btn-edit', 'btn-plus', 'btn-update'];
+        return array_diff_key($data, array_flip($filterKeys));
     }
 }
