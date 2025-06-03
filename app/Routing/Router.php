@@ -75,6 +75,16 @@ class Router
                 $roomsController = new RoomsController();
                 $roomsController->create();
                 break;
+            case '/guests':
+                if(!empty($data)) {
+                    $guestController = new GuestController();
+                    $guestController->save($data);
+                }
+                break;
+            case '/guests/create':
+                $guestController = new GuestController();
+                $guestController->create();
+                break;
         }
     }
     private function handlePatchRequests(mixed $requestUri) {
