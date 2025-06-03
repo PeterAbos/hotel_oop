@@ -5,6 +5,7 @@ namespace App\Routing;
 use App\Controllers\HomeController;
 use App\Controllers\RoomsController;
 use App\Controllers\GuestController;
+use App\Controllers\ReservationController;
 use App\Views\Display;
 
 class Router
@@ -54,6 +55,9 @@ class Router
                 $guestController = new GuestController();
                 $guestController->index();
                 break;
+            case '/reservations':
+                $reservationController = new ReservationController();
+                $reservationController->index();
         }
     }
     private function handlePostRequests(mixed $requestUri) {
