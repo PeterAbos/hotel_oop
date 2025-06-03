@@ -4,6 +4,7 @@ namespace App\Routing;
 
 use App\Controllers\HomeController;
 use App\Controllers\RoomsController;
+use App\Controllers\GuestController;
 use App\Views\Display;
 
 class Router
@@ -48,6 +49,10 @@ class Router
             case '/rooms':
                 $roomsController = new RoomsController();
                 $roomsController->index();
+                break;
+            case '/guests':
+                $guestController = new GuestController();
+                $guestController->index();
                 break;
         }
     }

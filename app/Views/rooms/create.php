@@ -3,7 +3,7 @@
 echo <<<HTML
         <form method='post' action='/rooms'>
             <fieldset>
-                <label for="name">Osztály</label>
+                <label for="name">Szobák</label>
                 <input type="text" name="floor" id="floor">
                 <input type="text" name="number" id="number">
                 <input type="text" name="capacity" id="capacity">
