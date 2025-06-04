@@ -58,6 +58,7 @@ class Router
             case '/reservations':
                 $reservationController = new ReservationController();
                 $reservationController->index();
+                break;
         }
     }
     private function handlePostRequests(mixed $requestUri) {
@@ -85,10 +86,21 @@ class Router
                 $guestController = new GuestController();
                 $guestController->create();
                 break;
+            case '/guests/edit':
+                $guestController = new GuestController();
+                $guestController->edit($id);
+                break;
         }
     }
     private function handlePatchRequests(mixed $requestUri) {
-
+        $data = $this->filterPostData($_POST);
+        switch($requestUri) {
+            case '/guests':
+                $id = $data['id'] ?? null;
+                $guestController = new GuestController();
+                $guestController->update($id, $data);
+                break;
+        }
     }
     private function handleDeleteRequests(mixed $requestUri) {
 
