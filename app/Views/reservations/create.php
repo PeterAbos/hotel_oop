@@ -6,13 +6,13 @@ echo <<<HTML
                 <label for="name">Foglalás</label>
     HTML;
                 
-echo "<select id='room_id'>";
+echo "<select name='room_id' id='room_id'>";
 foreach ($rooms->all() as $room) {
     echo "<option value='{$room->id}'>{$room->number}</option>";
 }
 echo "</select>";
 
-echo "<select id='guest_id'>";
+echo "<select name='guest_id' id='guest_id'>";
 foreach ($guests->all() as $guest) {
     echo "<option value='{$guest->id}'>{$guest->name}</option>";
 }

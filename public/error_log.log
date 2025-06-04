@@ -91,3 +91,7 @@ Stack trace:
 [04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
 [04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
 [04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:22:12 Europe/Berlin] PHP Warning:  Undefined array key "room_id" in C:\xampp\htdocs\gyak\hotel_oop\app\Controllers\ReservationController.php on line 63
+[04-Jun-2025 14:22:12 Europe/Berlin] PHP Warning:  Undefined array key "guest_id" in C:\xampp\htdocs\gyak\hotel_oop\app\Controllers\ReservationController.php on line 64
+[04-Jun-2025 14:22:13 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\index.php on line 10
+[04-Jun-2025 14:22:13 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\index.php on line 11
