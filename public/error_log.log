@@ -63,3 +63,5 @@ Stack trace:
 [04-Jun-2025 10:24:27 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'
 [04-Jun-2025 10:36:07 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'
 [04-Jun-2025 11:01:40 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'
+[04-Jun-2025 13:48:40 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'
+[04-Jun-2025 13:48:52 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'

@@ -4,10 +4,10 @@ echo <<<HTML
         <form method='post' action='/rooms'>
             <fieldset>
                 <label for="name">Szobák</label>
-                <input type="text" name="floor" id="floor">
-                <input type="text" name="number" id="number">
-                <input type="text" name="capacity" id="capacity">
-                <input type="text" name="price" id="price">
+                <input type="number" name="floor" id="floor">
+                <input type="number" name="number" id="number">
+                <input type="number" name="capacity" id="capacity">
+                <input type="number" name="price" id="price">
                 <input type="text" name="comment" id="comment">
                 <hr>
                 <button type="submit" name="btn-save">
