@@ -7,7 +7,7 @@ $html = <<<HTML
             <fieldset>
                 <label for="guests">Vendég</label>
                 <input type="text" name="name" id="name" value="{$guests->name}">
-                <input type="text" name="age" id="age" value="{$guests->age}">
+                <input type="number" name="age" id="age" value="{$guests->age}">
                 <hr>
                 <button type="submit" name="btn-update"><i class="fa fa-save">                    
                     </i>&nbsp;Mentés

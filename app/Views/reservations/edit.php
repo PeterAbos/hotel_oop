@@ -10,7 +10,7 @@ $html = <<<HTML
                 <input type="text" name="room_id" id="room_id" value="{$room->number}">
                 <input type="text" name="guest_id" id="guest_id" value="{$guest->name}">
                 <input type="text" name="days" id="days" value="{$reservations->days}">
-                <input type="text" name="date" id="date" value="{$reservations->date}">
+                <input type="date" name="date" id="date" value="{$reservations->date}">
                 <hr>
                 <button type="submit" name="btn-update"><i class="fa fa-save">                    
                     </i>&nbsp;Mentés
