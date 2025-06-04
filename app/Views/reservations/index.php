@@ -2,11 +2,13 @@
 
 $tableBody = "";
 foreach ($reservations as $reservation) {
+    $guest = $reservation->getGuest();
+    $room = $reservation->getRoom();
     $tableBody .= <<<HTML
             <tr>
                 <td>{$reservation->id}</td>
-                <td>{$reservation->room_id}</td>
-                <td>{$reservation->guest_id}</td>
+                <td>{$room->number}</td>
+                <td>{$guest->name}</td>
                 <td>{$reservation->days}</td>
                 <td>{$reservation->date}</td>
                 <td class='flex float-right'>

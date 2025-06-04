@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\GuestsModel;
+use App\Models\RoomsModel;
+
 class ReservationsModel extends Model
 {
     public int|null $room_id = null;
     public int|null $guest_id = null;
     public int|null $days = null;
-    public int|null $date = null;
+    public string|null $date = null;
 
     protected static $table = 'reservations';
 
@@ -26,5 +29,21 @@ class ReservationsModel extends Model
         if ($date) {
             $this->date = $date;
         }
+    }
+
+    function getGuest() {
+        $guestModel = new GuestsModel();
+        
+        $result = $guestModel->find($this->guest_id);
+
+        return $result;
+    }
+
+    function getRoom() {
+        $roomModel = new RoomsModel();
+
+        $result = $roomModel->find($this->room_id);
+
+        return $result;
     }
 }

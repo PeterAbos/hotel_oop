@@ -14,7 +14,7 @@ class RoomsController extends Controller {
 
     public function index(): void
     {
-        $rooms = $this->model->all(['order_by' => ['floor, number'], 'direction' => ['DESC']]);
+        $rooms = $this->model->all(['order_by' => ['floor, number'], 'direction' => ['ASC']]);
         $this->render('rooms/index', ['rooms' => $rooms]);
     }
 
