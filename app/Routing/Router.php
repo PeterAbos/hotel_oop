@@ -59,6 +59,8 @@ class Router
                 $reservationController = new ReservationController();
                 $reservationController->index();
                 break;
+            default:
+                $this->notFound();
         }
     }
     private function handlePostRequests(mixed $requestUri) {
@@ -90,6 +92,8 @@ class Router
                 $guestController = new GuestController();
                 $guestController->edit($id);
                 break;
+            default:
+                $this->notFound();
         }
     }
     private function handlePatchRequests(mixed $requestUri) {
@@ -100,10 +104,25 @@ class Router
                 $guestController = new GuestController();
                 $guestController->update($id, $data);
                 break;
+            default:
+                $this->notFound();
         }
     }
     private function handleDeleteRequests(mixed $requestUri) {
+        $data = $this->filterPostData($_POST);
 
+        switch($requestUri) {
+            case '/rooms':
+                $roomsController = new RoomsController();
+                $roomsController->delete((int) $data['id']);
+                break;
+            case '/guests':
+                $guestController = new GuestController();
+                $guestController->delete((int) $data['id']);
+                break;
+            default:
+                $this->notFound();
+        }
     }
     private function methodNotAllowed(): void
     {
@@ -115,5 +134,10 @@ class Router
         // Remove unnecessary keys in a clean and simple way
         $filterKeys = ['_method', 'submit', 'btn-del', 'btn-save', 'btn-edit', 'btn-plus', 'btn-update'];
         return array_diff_key($data, array_flip($filterKeys));
+    }
+    private function notFound(): void
+    {
+        header ($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
+        Display::message("404 Not Found");
     }
 }
