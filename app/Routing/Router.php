@@ -6,6 +6,7 @@ use App\Controllers\HomeController;
 use App\Controllers\RoomsController;
 use App\Controllers\GuestController;
 use App\Controllers\ReservationController;
+use App\Models\ReservationsModel;
 use App\Views\Display;
 
 class Router
@@ -106,6 +107,10 @@ class Router
                 $reservationController = new ReservationController();
                 $reservationController->create();
                 break;
+            case '/reservations/edit':
+                $reservationController = new ReservationController();
+                $reservationController->edit($id);
+                break;
             default:
                 $this->notFound();
         }
@@ -122,6 +127,11 @@ class Router
                 $id = $data['id'] ?? null;
                 $guestController = new GuestController();
                 $guestController->update($id, $data);
+                break;
+            case '/reservations':
+                $id = $data['id'] ?? null;
+                $reservationController = new ReservationController();
+                $reservationController->update($id, $data);
                 break;
             default:
                 $this->notFound();
