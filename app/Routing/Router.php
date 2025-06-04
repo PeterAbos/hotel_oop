@@ -149,6 +149,10 @@ class Router
                 $guestController = new GuestController();
                 $guestController->delete((int) $data['id']);
                 break;
+            case '/reservations':
+                $reservationController = new ReservationController();
+                $reservationController->delete((int) $data['id']);
+                break;
             default:
                 $this->notFound();
         }
