@@ -78,6 +78,10 @@ class Router
                 $roomsController = new RoomsController();
                 $roomsController->create();
                 break;
+            case '/rooms/edit':
+                $roomsController = new RoomsController();
+                $roomsController->edit($id);
+                break;
             case '/guests':
                 if(!empty($data)) {
                     $guestController = new GuestController();
@@ -99,6 +103,11 @@ class Router
     private function handlePatchRequests(mixed $requestUri) {
         $data = $this->filterPostData($_POST);
         switch($requestUri) {
+            case '/rooms':
+                $id = $data['id'] ?? null;
+                $roomsController = new RoomsController();
+                $roomsController->update($id, $data);
+                break;
             case '/guests':
                 $id = $data['id'] ?? null;
                 $guestController = new GuestController();
