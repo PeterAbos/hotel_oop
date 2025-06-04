@@ -65,3 +65,29 @@ Stack trace:
 [04-Jun-2025 11:01:40 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'
 [04-Jun-2025 13:48:40 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'
 [04-Jun-2025 13:48:52 Europe/Berlin] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'comment' in 'field list'
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:09:46 Europe/Berlin] PHP Warning:  Attempt to read property "name" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:10:31 Europe/Berlin] PHP Warning:  Undefined property: App\Models\RoomsModel::$name in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:10:31 Europe/Berlin] PHP Warning:  Undefined property: App\Models\RoomsModel::$name in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:10:31 Europe/Berlin] PHP Warning:  Undefined property: App\Models\RoomsModel::$name in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 11
+[04-Jun-2025 14:11:07 Europe/Berlin] PHP Warning:  Undefined property: App\Models\RoomsModel::$name in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:07 Europe/Berlin] PHP Warning:  Undefined property: App\Models\RoomsModel::$name in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:07 Europe/Berlin] PHP Warning:  Undefined property: App\Models\RoomsModel::$name in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "id" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12
+[04-Jun-2025 14:11:35 Europe/Berlin] PHP Warning:  Attempt to read property "number" on null in C:\xampp\htdocs\gyak\hotel_oop\app\Views\reservations\create.php on line 12

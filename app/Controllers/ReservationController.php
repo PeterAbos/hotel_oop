@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\ReservationsModel;
+use App\Controllers\RoomsController;
 use App\Views\Display;
 
 class ReservationController extends Controller {
@@ -20,7 +21,9 @@ class ReservationController extends Controller {
 
     public function create(): void
     {
-        $this->render('reservations/create');
+        $rooms = new RoomsController();
+        $guests = new GuestController();
+        $this->render('reservations/create', ['rooms' => $rooms->model, 'guests' => $guests->model]);
     }
     public function edit(int $id): void
     {
@@ -30,7 +33,9 @@ class ReservationController extends Controller {
             $_SESSION['warning_message'] = "A foglalás a megadott azonosítóval: $id nem található.";
             $this->redirect('/reservations');
         }
-        $this->render('reservations/edit', ['reservations' => $reservations]);
+        $rooms = new RoomsController();
+        $guests = new GuestController();
+        $this->render('reservations/edit', ['reservations' => $reservations, 'rooms' => $rooms->model, 'guests' => $guests->model]);
     }
 
     public function save(array $data): void
