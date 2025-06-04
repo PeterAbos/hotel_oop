@@ -33,6 +33,7 @@ class ReservationController extends Controller {
             $_SESSION['warning_message'] = "A foglalás a megadott azonosítóval: $id nem található.";
             $this->redirect('/reservations');
         }
+        
         $rooms = new RoomsController();
         $guests = new GuestController();
         $this->render('reservations/edit', ['reservations' => $reservations, 'rooms' => $rooms->model, 'guests' => $guests->model]);
@@ -43,6 +44,20 @@ class ReservationController extends Controller {
         if (empty($data['date'])) {
             $_SESSION['warning_message'] = "A dátum kötelező mező.";
             $this->redirect('/reservations/create'); // Redirect if input is invalid
+        }
+        foreach ($this->model->all() as $row) {
+            if ($row->room_id == $_POST['room_id']) {
+                $existingStart = strtotime($row->date);
+                $existingEnd = strtotime($row->date . " +" . ($row->days - 1) . " days");
+
+                $newStart = strtotime($data['date']);
+                $newEnd = strtotime($data['date'] . " +" . ($data['days'] - 1) . " days");
+
+                if ($newStart <= $existingEnd && $newEnd >= $existingStart) {
+                    $_SESSION['warning_message'] = "Ez a szoba már foglalt ebben az időben!";
+                    $this->redirect('/reservations');
+                }
+            }
         }
         // Use the existing model instance
         $this->model->room_id = $data['room_id'];
@@ -59,6 +74,20 @@ class ReservationController extends Controller {
         if (!$reservations || empty($data['date'])) {
             // Handle invalid ID or data
             $this->redirect('/reservations');
+        }
+        foreach ($this->model->all() as $row) {
+            if ($row->room_id == $_POST['room_id']) {
+                $existingStart = strtotime($row->date);
+                $existingEnd = strtotime($row->date . " +" . ($row->days - 1) . " days");
+
+                $newStart = strtotime($data['date']);
+                $newEnd = strtotime($data['date'] . " +" . ($data['days'] - 1) . " days");
+
+                if ($newStart <= $existingEnd && $newEnd >= $existingStart) {
+                    $_SESSION['warning_message'] = "Ez a szoba már foglalt ebben az időben!";
+                    $this->redirect('/reservations');
+                }
+            }
         }
         $reservations->room_id = $data['room_id'];
         $reservations->guest_id = $data['guest_id'];

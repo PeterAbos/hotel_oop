@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Controllers\ReservationController;
 use App\Models\GuestsModel;
 use App\Models\RoomsModel;
 
