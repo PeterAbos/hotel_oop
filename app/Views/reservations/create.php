@@ -3,7 +3,7 @@
 echo <<<HTML
         <form method='post' action='/reservations'>
             <fieldset>
-                <label for="name">Foglalá</label>
+                <label for="name">Foglalás</label>
                 <input type="text" name="room_id" id="room_id">
                 <input type="text" name="guest_id" id="guest_id">
                 <input type="text" name="days" id="days">

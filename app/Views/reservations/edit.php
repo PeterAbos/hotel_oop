@@ -1,13 +1,14 @@
 <?php
-
+$guest = $reservations->getGuest();
+$room = $reservations->getRoom();
 $html = <<<HTML
         <form method='post' action='/reservations'>
             <input type='hidden' name='_method' value='PATCH'>
             <input type='hidden' name="id" value="{$reservations->id}">
             <fieldset>
                 <label for="reservations">Foglalás</label>
-                <input type="text" name="room_id" id="room_id" value="{$reservations->room_id}">
-                <input type="text" name="guest_id" id="guest_id" value="{$reservations->guest_id}">
+                <input type="text" name="room_id" id="room_id" value="{$room->number}">
+                <input type="text" name="guest_id" id="guest_id" value="{$guest->name}">
                 <input type="text" name="days" id="days" value="{$reservations->days}">
                 <input type="text" name="date" id="date" value="{$reservations->date}">
                 <hr>
