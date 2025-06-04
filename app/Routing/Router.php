@@ -96,6 +96,16 @@ class Router
                 $guestController = new GuestController();
                 $guestController->edit($id);
                 break;
+            case '/reservations':
+                if(!empty($data)) {
+                    $reservationController = new ReservationController();
+                    $reservationController->save($data);
+                }
+                break;
+            case '/reservations/create':
+                $reservationController = new ReservationController();
+                $reservationController->create();
+                break;
             default:
                 $this->notFound();
         }
